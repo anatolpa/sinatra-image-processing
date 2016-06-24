@@ -4,18 +4,13 @@ class TaskWorker
   sidekiq_options queue: 'images'
 
   def perform(id)
-    task        = Task.find id
-    task.status = 'process'
-    task.save!
+    task = Task.find id
     task.process_image!
-
-    task.status = 'done'
-    task.save!
 
     if task.callback_url
       options = {
           body: {
-              task: task
+              status: task.status
           }
       }
       HTTParty.post(task.callback_url, options)

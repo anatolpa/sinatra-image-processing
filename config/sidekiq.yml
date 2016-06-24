@@ -1,8 +1,8 @@
 :concurrency: 3
 :pidfile: tmp/pids/sidekiq.pid
 :queues:
-  - default
   - [images, 1]
+  - default
 
 :limits:
   images: 5

@@ -11,6 +11,6 @@ default: &default
 development:
   clients:
     default:
-      database: homework
+      database: <%= ENV['MONGO_DATABASE'] %>
       hosts:
-        - localhost:27017
+        - <%= ENV['MONGO_HOST'] %>
