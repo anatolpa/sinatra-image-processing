@@ -3,7 +3,6 @@ require 'bundler'
 
 Bundler.require(:default, ENV['RACK_ENV'])
 
-# require 'rack/protection'
 require 'sidekiq/api'
 require 'sidekiq/web'
 require './uploaders/image_uploader'
