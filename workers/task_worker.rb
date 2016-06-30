@@ -10,7 +10,8 @@ class TaskWorker
     if task.callback_url
       options = {
           body: {
-              status: task.status
+              status:       task.status,
+              result_image: task.image.url
           }
       }
       HTTParty.post(task.callback_url, options)
