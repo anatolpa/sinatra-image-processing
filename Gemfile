@@ -13,6 +13,7 @@ gem 'active_model_serializers'
 gem 'mini_magick'
 gem 'will_paginate_mongoid'
 gem 'httparty'
+gem 'foreman'
 
 group :development do
   gem 'pry'

@@ -50,6 +50,8 @@ GEM
     debug_inspector (0.0.2)
     dotenv (2.1.1)
     erubis (2.7.0)
+    foreman (0.82.0)
+      thor (~> 0.19.1)
     git-version-bump (0.15.1)
     httparty (0.13.7)
       json (~> 1.8)
@@ -173,6 +175,7 @@ DEPENDENCIES
   active_model_serializers
   carrierwave-mongoid
   dotenv
+  foreman
   httparty
   mini_magick
   mongoid
